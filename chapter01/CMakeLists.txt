@@ -1,0 +1,5 @@
+FILE(GLOB source_file CONFIGURE_DEPENDS *.cpp)
+FILE(GLOB source_head_file CONFIGURE_DEPENDS *.h)
+message("source_file: " ${source_file})
+add_library(chap01 ${source_file} ${source_head_file})
+target_include_directories(chap01 PUBLIC .)
